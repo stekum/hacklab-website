@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #071325;
+  --color-primary: #46f1c5;
+  --color-secondary: #41eec2;
+  --color-primary-container: #00d4aa;
+  --color-on-surface: #d7e3fc;
+  --color-surface-container: #142032;
+  --color-surface-container-low: #101c2e;
+  --color-surface-container-high: #1f2a3d;
+  --color-surface-container-highest: #2a3549;
+  --color-surface-container-lowest: #030e20;
+  --color-surface-variant: #2a3549;
+  --color-outline-variant: #3b4a44;
+  --color-on-surface-variant: #bacac2;
+  --color-tertiary: #ffcea6;
+  --color-error: #ffb4ab;
+  --color-on-primary: #00382b;
+  --color-on-primary-fixed: #002118;
+  --color-inverse-primary: #006b55;
+  --color-background: #071325;
+  --color-on-background: #d7e3fc;
+
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  background-color: #071325;
+  color: #d7e3fc;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(20, 32, 50, 0.6);
+  backdrop-filter: blur(24px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00d4aa 0%, #41eec2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-cta {
+  background: linear-gradient(135deg, #00d4aa 0%, #41eec2 100%);
+}
+
+.grid-overlay {
+  background-image: radial-gradient(#3b4a44 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+::selection {
+  background-color: #46f1c5;
+  color: #00382b;
+}
