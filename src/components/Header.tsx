@@ -22,7 +22,7 @@ export function Header() {
 
   return (
     <nav className="fixed top-0 w-full z-[100] bg-surface/60 backdrop-blur-xl border-b border-outline-variant/15 shadow-[0_40px_60px_-5px_rgba(215,227,252,0.04)]">
-      <div className="flex justify-between items-center px-8 py-4 max-w-[2560px] mx-auto">
+      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <Link href="/" className="text-xl font-black tracking-tighter text-on-surface font-headline">
           HackLab
         </Link>
@@ -55,6 +55,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
+          type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-on-surface"
           aria-label="Menu"
@@ -66,8 +67,12 @@ export function Header() {
       </div>
 
       {/* Mobile Nav */}
-      {mobileOpen && (
-        <div className="md:hidden bg-surface-container/95 backdrop-blur-xl border-t border-outline-variant/15 px-8 py-6 space-y-4">
+      <div
+        className={`md:hidden bg-surface-container/95 backdrop-blur-xl border-t border-outline-variant/15 px-8 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          mobileOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0"
+        }`}
+      >
+        <div className="space-y-4">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -95,7 +100,7 @@ export function Header() {
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

@@ -6,7 +6,7 @@ export function Footer() {
 
   return (
     <footer className="w-full py-20 px-8 border-t border-outline-variant/15 bg-surface-container-lowest">
-      <div className="max-w-[2560px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
           <div className="text-lg font-bold text-on-surface font-headline">
             HackLab
