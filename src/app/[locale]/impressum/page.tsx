@@ -10,11 +10,11 @@ export default async function ImpressumPage({
   const t = await getTranslations("impressum_page");
 
   return (
-    <section className="pt-40 pb-20 px-8">
+    <section className="pt-40 pb-20 px-8 grid-overlay animated-gradient">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-5xl font-headline font-extrabold tracking-tighter mb-12">{t("title")}</h1>
 
-        <div className="space-y-8 text-on-surface/70 leading-relaxed">
+        <div className="glass-card p-10 rounded-lg border border-outline-variant/10 space-y-8 text-on-surface/70 leading-relaxed">
           <div>
             <h2 className="text-xl font-headline font-bold text-on-surface mb-2">{t("company")}</h2>
             <p>{t("represented_by")}: {t("name")}</p>

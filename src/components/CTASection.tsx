@@ -28,12 +28,20 @@ export function CTASection({
             <p className="text-on-surface/60 text-xl max-w-2xl mx-auto mb-12">
               {description}
             </p>
-            <Link
-              href={buttonHref as "/contact"}
-              className="inline-block gradient-cta text-on-primary-fixed px-12 py-5 rounded-lg font-bold text-lg hover:brightness-110 transition-all"
-            >
-              {buttonText}
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-6">
+              <Link
+                href={buttonHref as "/contact"}
+                className="gradient-cta text-on-primary-fixed px-12 py-5 rounded-lg font-bold text-lg hover:brightness-110 transition-all"
+              >
+                {buttonText}
+              </Link>
+              <Link
+                href="/contact"
+                className="border border-outline-variant hover:bg-surface-variant/20 text-on-surface px-12 py-5 rounded-lg font-bold text-lg transition-all"
+              >
+                Projekt anfragen
+              </Link>
+            </div>
           </div>
         </div>
       </FadeIn>

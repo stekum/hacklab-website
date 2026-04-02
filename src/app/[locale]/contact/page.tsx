@@ -15,11 +15,11 @@ export default function ContactPage() {
         description={t("hero_desc")}
       />
 
-      <section className="py-20 px-8">
+      <section className="py-24 px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <SlideIn direction="left">
-            <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20">
+            <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all">
               <form
                 className="space-y-6"
                 onSubmit={(e) => {
@@ -27,37 +27,40 @@ export default function ContactPage() {
                 }}
               >
                 <div>
-                  <label className="block text-sm font-medium text-on-surface/70 mb-2">
+                  <label htmlFor="contact-name" className="block text-sm font-medium text-on-surface/70 mb-2">
                     {t("form_name")}
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
-                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors"
+                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface/30 focus:border-primary focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,212,170,0.15)] transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-on-surface/70 mb-2">
+                  <label htmlFor="contact-email" className="block text-sm font-medium text-on-surface/70 mb-2">
                     {t("form_email")}
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
-                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors"
+                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface/30 focus:border-primary focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,212,170,0.15)] transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-on-surface/70 mb-2">
+                  <label htmlFor="contact-company" className="block text-sm font-medium text-on-surface/70 mb-2">
                     {t("form_company")}
                   </label>
                   <input
+                    id="contact-company"
                     type="text"
-                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors"
+                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface/30 focus:border-primary focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,212,170,0.15)] transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-on-surface/70 mb-2">
+                  <label htmlFor="contact-topic" className="block text-sm font-medium text-on-surface/70 mb-2">
                     {t("form_topic")}
                   </label>
-                  <select className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors">
+                  <select id="contact-topic" className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,212,170,0.15)] transition-all">
                     <option value="">{t("form_topic_placeholder")}</option>
                     <option value="platform">{t("form_topic_platform")}</option>
                     <option value="ai">{t("form_topic_ai")}</option>
@@ -72,17 +75,18 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-on-surface/70 mb-2">
+                  <label htmlFor="contact-message" className="block text-sm font-medium text-on-surface/70 mb-2">
                     {t("form_message")}
                   </label>
                   <textarea
+                    id="contact-message"
                     rows={5}
-                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors resize-none"
+                    className="w-full bg-surface-container border border-outline-variant/20 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface/30 focus:border-primary focus:outline-none focus:shadow-[0_0_0_2px_rgba(0,212,170,0.15)] transition-all resize-none"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full gradient-cta text-on-primary-fixed py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all"
+                  className="w-full gradient-cta text-on-primary-fixed py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all shadow-[0_20px_40px_-10px_rgba(0,212,170,0.3)]"
                 >
                   {t("form_submit")}
                 </button>
@@ -125,7 +129,7 @@ export default function ContactPage() {
                 ].map((contact) => (
                   <StaggerItem key={contact.icon}>
                     <div
-                      className="glass-card p-6 rounded-lg border border-outline-variant/10 hover:border-primary/20 flex items-start gap-4"
+                      className="glass-card p-6 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex items-start gap-4 transition-all"
                     >
                       <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center shrink-0">
                         <span className="material-symbols-outlined text-primary">
@@ -139,7 +143,7 @@ export default function ContactPage() {
                         {contact.href ? (
                           <a
                             href={contact.href}
-                            className="text-on-surface hover:text-primary transition-colors"
+                            className="text-on-surface hover:text-[#00D4AA] transition-colors"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -156,19 +160,22 @@ export default function ContactPage() {
 
               {/* CTA Banner */}
               <FadeIn delay={0.3}>
-                <div className="glass-card p-8 rounded-lg border border-primary/20 mt-8">
-                  <h3 className="text-xl font-headline font-bold mb-2">
-                    {t("cta_title")}
-                  </h3>
-                  <p className="text-on-surface/60 mb-4">{t("cta_desc")}</p>
-                  <a
-                    href="https://calendly.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block gradient-cta text-on-primary-fixed px-8 py-3 rounded-lg font-bold hover:brightness-110 transition-all"
-                  >
-                    {t("cta_button")}
-                  </a>
+                <div className="glass-card p-8 rounded-lg border border-primary/20 hover:border-primary/40 mt-8 transition-all relative overflow-hidden">
+                  <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 blur-[60px] rounded-full" />
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-headline font-bold mb-2">
+                      {t("cta_title")}
+                    </h3>
+                    <p className="text-on-surface/60 mb-4">{t("cta_desc")}</p>
+                    <a
+                      href="https://calendly.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block gradient-cta text-on-primary-fixed px-8 py-3 rounded-lg font-bold hover:brightness-110 transition-all shadow-[0_10px_30px_-10px_rgba(0,212,170,0.3)]"
+                    >
+                      {t("cta_button")}
+                    </a>
+                  </div>
                 </div>
               </FadeIn>
             </div>

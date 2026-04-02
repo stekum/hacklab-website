@@ -21,9 +21,9 @@ export function Header() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-[100] bg-surface/60 backdrop-blur-xl border-b border-outline-variant/15 shadow-[0_40px_60px_-5px_rgba(215,227,252,0.04)]">
+    <nav className="fixed top-0 w-full z-[100] bg-[#071325]/60 backdrop-blur-xl border-b border-[#3b4a44]/15 shadow-[0_40px_60px_-5px_rgba(215,227,252,0.04)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <Link href="/" className="text-xl font-black tracking-tighter text-on-surface font-headline">
+        <Link href="/" className="text-xl font-black tracking-tighter text-[#d7e3fc] font-headline">
           HackLab
         </Link>
 
@@ -33,7 +33,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-headline tracking-tight text-sm uppercase font-bold text-on-surface/70 hover:text-secondary transition-colors duration-300"
+              className="font-headline tracking-tight text-sm uppercase font-bold text-[#d7e3fc]/70 hover:text-[#41eec2] transition-colors duration-300"
             >
               {link.label}
             </Link>
@@ -41,13 +41,13 @@ export function Header() {
           <Link
             href={pathname}
             locale={otherLocale}
-            className="font-headline tracking-tight text-sm uppercase font-bold text-on-surface/50 hover:text-secondary transition-colors duration-300"
+            className="font-headline tracking-tight text-sm uppercase font-bold text-[#d7e3fc]/50 hover:text-[#41eec2] transition-colors duration-300"
           >
             {otherLocale.toUpperCase()}
           </Link>
           <Link
             href="/contact"
-            className="gradient-cta text-on-primary-fixed px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all"
+            className="bg-[#00D4AA] text-[#002118] px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all scale-95 active:scale-90"
           >
             {t("cta")}
           </Link>
@@ -68,7 +68,7 @@ export function Header() {
 
       {/* Mobile Nav */}
       <div
-        className={`md:hidden bg-surface-container/95 backdrop-blur-xl border-t border-outline-variant/15 px-8 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`md:hidden bg-[#142032]/95 backdrop-blur-xl border-t border-[#3b4a44]/15 px-8 overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           mobileOpen ? "max-h-96 py-6 opacity-100" : "max-h-0 py-0 opacity-0"
         }`}
       >
@@ -78,23 +78,23 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block font-headline tracking-tight text-sm uppercase font-bold text-on-surface/70 hover:text-secondary transition-colors duration-300"
+              className="block font-headline tracking-tight text-sm uppercase font-bold text-[#d7e3fc]/70 hover:text-[#41eec2] transition-colors duration-300"
             >
               {link.label}
             </Link>
           ))}
-          <div className="flex items-center gap-4 pt-4 border-t border-outline-variant/15">
+          <div className="flex items-center gap-4 pt-4 border-t border-[#3b4a44]/15">
             <Link
               href={pathname}
               locale={otherLocale}
-              className="font-headline tracking-tight text-sm uppercase font-bold text-on-surface/50 hover:text-secondary transition-colors duration-300"
+              className="font-headline tracking-tight text-sm uppercase font-bold text-[#d7e3fc]/50 hover:text-[#41eec2] transition-colors duration-300"
             >
               {otherLocale.toUpperCase()}
             </Link>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="gradient-cta text-on-primary-fixed px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all"
+              className="bg-[#00D4AA] text-[#002118] px-6 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all"
             >
               {t("cta")}
             </Link>

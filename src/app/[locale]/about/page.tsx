@@ -18,7 +18,7 @@ export default async function AboutPage({
       <PageHero label={t("hero_label")} title={t("hero_title")} description={t("hero_desc")} />
 
       {/* Company Story */}
-      <section className="py-20 px-8 bg-surface-container-low">
+      <section className="py-24 px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <SlideIn direction="left">
             <h2 className="text-4xl font-headline font-bold mb-8">{t("story_title")}</h2>
@@ -26,7 +26,7 @@ export default async function AboutPage({
             <p className="text-lg text-on-surface/70 leading-relaxed">{t("story_p2")}</p>
           </SlideIn>
           <SlideIn direction="right">
-            <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20">
+            <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all">
               <div className="w-20 h-20 bg-primary/20 rounded-lg flex items-center justify-center mb-8">
                 <span className="material-symbols-outlined text-primary text-4xl">person</span>
               </div>
@@ -39,7 +39,7 @@ export default async function AboutPage({
       </section>
 
       {/* Process */}
-      <section className="py-20 px-8">
+      <section className="py-24 px-8">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl font-headline font-bold text-center mb-16">{t("process_title")}</h2>
@@ -67,7 +67,7 @@ export default async function AboutPage({
       </section>
 
       {/* Values */}
-      <section className="py-20 px-8 bg-surface-container-lowest">
+      <section className="py-24 px-8 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl font-headline font-bold text-center mb-16">{t("values_title")}</h2>
@@ -79,7 +79,7 @@ export default async function AboutPage({
               { icon: "handshake", title: t("value3_title"), desc: t("value3_desc") },
             ].map((value) => (
               <StaggerItem key={value.icon}>
-                <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 transition-all h-full">
+                <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full">
                   <span className="material-symbols-outlined text-5xl text-primary mb-6 block">{value.icon}</span>
                   <h3 className="text-2xl font-headline font-bold mb-4">{value.title}</h3>
                   <p className="text-on-surface/60 leading-relaxed">{value.desc}</p>

@@ -41,13 +41,13 @@ export default async function HomePage({
               <div className="flex flex-wrap gap-6">
                 <Link
                   href="/contact"
-                  className="gradient-cta text-on-primary-fixed px-10 py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all"
+                  className="gradient-cta text-on-primary-fixed px-10 py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all shadow-[0_20px_40px_-10px_rgba(0,212,170,0.3)]"
                 >
                   {t("hero.cta_primary")}
                 </Link>
                 <Link
                   href="/cases"
-                  className="border border-outline-variant hover:bg-surface-variant/20 hover:border-primary/20 text-on-surface px-10 py-4 rounded-lg font-bold text-lg transition-all"
+                  className="border border-outline-variant hover:bg-surface-variant/20 text-on-surface px-10 py-4 rounded-lg font-bold text-lg transition-all"
                 >
                   {t("hero.cta_secondary")}
                 </Link>
@@ -86,7 +86,7 @@ export default async function HomePage({
             ].map((pillar) => (
               <StaggerItem key={pillar.icon}>
                 <div
-                  className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/20 transition-all group h-full"
+                  className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all group h-full"
                 >
                   <span className="material-symbols-outlined text-5xl text-primary mb-8 block">
                     {pillar.icon}
@@ -117,7 +117,7 @@ export default async function HomePage({
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Hero Service Card */}
             <StaggerItem className="md:col-span-8">
-              <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/20 flex flex-col justify-between min-h-[500px] overflow-hidden relative">
+              <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col justify-between min-h-[500px] overflow-hidden relative transition-all">
                 <div className="relative z-10">
                   <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-12">
                     <span className="material-symbols-outlined text-primary text-3xl">psychology</span>
@@ -147,7 +147,7 @@ export default async function HomePage({
             </StaggerItem>
 
             <StaggerItem className="md:col-span-4">
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 h-full">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all">
                 <span className="material-symbols-outlined text-primary text-3xl mb-8 block">architecture</span>
                 <h3 className="text-2xl font-headline font-bold mb-4">{t("services_section.platform_title")}</h3>
                 <p className="text-on-surface/60 mb-8">{t("services_section.platform_desc")}</p>
@@ -162,40 +162,40 @@ export default async function HomePage({
             </StaggerItem>
 
             <StaggerItem className="md:col-span-4">
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 h-full">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all">
                 <span className="material-symbols-outlined text-primary text-3xl mb-8 block">settings_input_component</span>
                 <h3 className="text-2xl font-headline font-bold mb-4">{t("services_section.integration_title")}</h3>
                 <p className="text-on-surface/60 mb-8">{t("services_section.integration_desc")}</p>
                 <ul className="space-y-3 text-sm font-medium text-on-surface/80">
-                  <li>{t("services_section.integration_item_1")}</li>
-                  <li>{t("services_section.integration_item_2")}</li>
-                  <li>{t("services_section.integration_item_3")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.integration_item_1")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.integration_item_2")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.integration_item_3")}</li>
                 </ul>
               </div>
             </StaggerItem>
 
             <StaggerItem className="md:col-span-4">
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 h-full">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all">
                 <span className="material-symbols-outlined text-primary text-3xl mb-8 block">eco</span>
                 <h3 className="text-2xl font-headline font-bold mb-4">{t("services_section.sustainability_title")}</h3>
                 <p className="text-on-surface/60 mb-8">{t("services_section.sustainability_desc")}</p>
                 <ul className="space-y-3 text-sm font-medium text-on-surface/80">
-                  <li>{t("services_section.sustainability_item_1")}</li>
-                  <li>{t("services_section.sustainability_item_2")}</li>
-                  <li>{t("services_section.sustainability_item_3")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.sustainability_item_1")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.sustainability_item_2")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.sustainability_item_3")}</li>
                 </ul>
               </div>
             </StaggerItem>
 
             <StaggerItem className="md:col-span-4">
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 h-full">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all">
                 <span className="material-symbols-outlined text-primary text-3xl mb-8 block">monitoring</span>
                 <h3 className="text-2xl font-headline font-bold mb-4">{t("services_section.ae_title")}</h3>
                 <p className="text-on-surface/60 mb-8">{t("services_section.ae_desc")}</p>
                 <ul className="space-y-3 text-sm font-medium text-on-surface/80">
-                  <li>{t("services_section.ae_item_1")}</li>
-                  <li>{t("services_section.ae_item_2")}</li>
-                  <li>{t("services_section.ae_item_3")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.ae_item_1")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.ae_item_2")}</li>
+                  <li className="flex items-center gap-2">{t("services_section.ae_item_3")}</li>
                 </ul>
               </div>
             </StaggerItem>
@@ -211,7 +211,7 @@ export default async function HomePage({
           </FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-32">
             <SlideIn direction="left" className="lg:col-span-7">
-              <div className="glass-card p-1 rounded-2xl border border-outline-variant/10 hover:border-primary/20 overflow-hidden group">
+              <div className="glass-card p-1 rounded-2xl border border-outline-variant/10 hover:border-primary/30 overflow-hidden group transition-all">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
@@ -262,7 +262,7 @@ export default async function HomePage({
               { value: "3", label: t("metrics.continents") },
             ].map((metric) => (
               <ScaleIn key={metric.label}>
-                <div className="p-12 glass-card rounded-lg border border-outline-variant/5 hover:border-primary/20">
+                <div className="p-12 glass-card rounded-lg border border-outline-variant/5 hover:border-primary/30 transition-all">
                   <div className="text-6xl font-headline font-black gradient-text mb-2">{metric.value}</div>
                   <div className="text-on-surface/40 uppercase tracking-widest text-xs font-bold">{metric.label}</div>
                 </div>
@@ -325,7 +325,7 @@ export default async function HomePage({
                 <Link href="/contact" className="gradient-cta text-on-primary-fixed px-12 py-5 rounded-lg font-bold text-lg hover:brightness-110 transition-all">
                   {t("cta.primary")}
                 </Link>
-                <Link href="/contact" className="border border-outline-variant hover:bg-surface-variant/20 hover:border-primary/20 text-on-surface px-12 py-5 rounded-lg font-bold text-lg transition-all">
+                <Link href="/contact" className="border border-outline-variant hover:bg-surface-variant/20 text-on-surface px-12 py-5 rounded-lg font-bold text-lg transition-all">
                   {t("cta.secondary")}
                 </Link>
               </div>

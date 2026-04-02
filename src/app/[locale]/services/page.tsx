@@ -22,10 +22,10 @@ export default async function ServicesPage({
       <PageHero label={t("hero_label")} title={t("hero_title")} description={t("hero_desc")} />
 
       {/* Featured: Agentic AI */}
-      <section className="py-20 px-8 bg-surface-container-low">
+      <section className="py-24 px-8 bg-surface-container-low">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/20 flex flex-col lg:flex-row gap-12 overflow-hidden relative min-h-[400px]">
+            <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col lg:flex-row gap-12 overflow-hidden relative min-h-[400px] transition-all">
               <div className="relative z-10 lg:w-2/3">
                 <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-8">
                   <span className="material-symbols-outlined text-primary text-3xl">psychology</span>
@@ -51,19 +51,26 @@ export default async function ServicesPage({
       </section>
 
       {/* Service Cards Grid */}
-      <section className="py-20 px-8">
+      <section className="py-24 px-8">
         <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            { icon: "architecture", title: t("platform_title"), desc: t("platform_desc") },
-            { icon: "monitoring", title: t("ae_title"), desc: t("ae_desc") },
-            { icon: "settings_input_component", title: t("integration_title"), desc: t("integration_desc") },
-            { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc") },
+            { icon: "architecture", title: t("platform_title"), desc: t("platform_desc"), items: ["Databricks & Microsoft Fabric", "Cloud Migration (Azure/AWS)", "Data Governance Frameworks"] },
+            { icon: "monitoring", title: t("ae_title"), desc: t("ae_desc"), items: ["dbt Core Development", "Data Quality Monitoring", "Semantic Layer Design"] },
+            { icon: "settings_input_component", title: t("integration_title"), desc: t("integration_desc"), items: ["SAP S/4HANA Extractors", "API-first Middleware", "Real-time CDC Pipelines"] },
+            { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc"), items: ["Carbon Footprint Engine", "Supply Chain Transparency", "EU Taxonomy Compliance"] },
           ].map((service) => (
             <StaggerItem key={service.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/20 transition-all h-full">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full">
                 <span className="material-symbols-outlined text-primary text-4xl mb-6 block">{service.icon}</span>
                 <h3 className="text-2xl font-headline font-bold mb-4">{service.title}</h3>
-                <p className="text-on-surface/60 leading-relaxed">{service.desc}</p>
+                <p className="text-on-surface/60 leading-relaxed mb-8">{service.desc}</p>
+                <ul className="space-y-3 text-sm font-medium text-on-surface/80">
+                  {service.items.map((item) => (
+                    <li key={item} className="flex items-center gap-2">
+                      <span className="w-1 h-1 bg-primary rounded-full" /> {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </StaggerItem>
           ))}
@@ -71,7 +78,7 @@ export default async function ServicesPage({
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 px-8 bg-surface-container-lowest">
+      <section className="py-24 px-8 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl font-headline font-bold mb-12">{t("tech_title")}</h2>
@@ -79,7 +86,7 @@ export default async function ServicesPage({
           <StaggerContainer className="flex flex-wrap justify-center gap-6">
             {techStack.map((tech) => (
               <StaggerItem key={tech}>
-                <div className="px-6 py-3 glass-card rounded-lg border border-outline-variant/10 hover:border-primary/20 text-on-surface/70 font-medium text-sm">{tech}</div>
+                <div className="px-6 py-3 glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 text-on-surface/70 font-medium text-sm transition-all">{tech}</div>
               </StaggerItem>
             ))}
           </StaggerContainer>

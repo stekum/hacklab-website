@@ -259,8 +259,8 @@ export function HeroSVG() {
           </path>
         </svg>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#071325] via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071325] via-transparent to-transparent pointer-events-none" />
     </div>
   );
 }
