@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { TechStackLogos } from "@/components/CompanyLogos";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default async function ServicesPage({
@@ -41,10 +42,10 @@ export default async function ServicesPage({
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-25 hidden lg:block"
+                className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-40"
                 style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
-                alt="AI visualization"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEuPGaD74Mol-c-eeF42jwJw50fAEBEoKlnYNOM04YItCCukr38PfGASZv20ZB9pUj-ijuDMG3AcIDyVjnvQejhKPURZTQQrudpyC5ytUX6DLvCC7KDGDcEkiO9ydvP6ZZ67qnsndNVaJpoEYNSk_1DoDZZF1D0oj0qIL22bGY5cXusg7PTR16xWYfHRzDEf9YSFu40YXG_0xG89AkcqDhPdP-rPN47k7H4gX66rc244y4lMGruWBcUdPMM5mLcAuB2dPvW8xXv4g"
+                alt="Neural network brain visualization"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJV7XSG2naM3lDnXVUb2087QI8CJZT670uu-0Lf3QH0WxJaZX0KYWxLXkMFg02iCXUQLJorgzxb0Kp1pxotgUT01LsTuC-XR8T5eRmV616W5i2AY17MZs0NzSZajobJ7VJafpX4-m5bN0wVxpA10_WAXX1io6IbS5k4-xphFrmVPlQeoljmNnOxc6U6Oiz-Taa0cN1_qgOCFJZ2QBJD7r4TxhMy6BTqHukQTKVRNT8Nb3yipwbAPdTi34ZzlR-A7UYkDCDqOwqGJ1r"
               />
             </div>
           </FadeIn>
@@ -87,7 +88,8 @@ export default async function ServicesPage({
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-headline font-bold mb-12 tracking-tighter">{t("tech_title")}</h2>
           </FadeIn>
-          <StaggerContainer className="flex flex-wrap justify-center gap-4">
+          <TechStackLogos />
+          <StaggerContainer className="flex flex-wrap justify-center gap-4 mt-12">
             {techStack.map((tech) => (
               <StaggerItem key={tech}>
                 <div className="px-6 py-3 glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 text-[#d7e3fc]/70 font-bold text-sm tracking-tight transition-all hover:text-primary">{tech}</div>

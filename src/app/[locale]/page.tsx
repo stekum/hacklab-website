@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { HeroSVG } from "@/components/HeroSVG";
+import { TrustLogos } from "@/components/CompanyLogos";
 import { AnimatedCounter, FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default async function HomePage({
@@ -19,17 +20,23 @@ export default async function HomePage({
       <section className="relative pt-32 pb-40 px-8 min-h-screen flex items-center overflow-hidden">
         {/* Animated gradient background */}
         <div className="absolute inset-0 animated-gradient" />
+        {/* Hero background image — cinematic data command center */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          alt=""
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUdgGoEKdz-8lvx7e7VFHSl0aSGMrS3eAmGgAMBCrcWn6_oOUVi46800kfnHUE6oJEEaCCTbveVqC00z4aBVP8RcQkWAdWjP2uA9QLgHYHh0n45BR79TYcPc4DsnXyAz8Z6RUcOs6yA65f4Q-POhBdDOIG-zHsBXyBUGWY-8vjzjFR6id_YmY4HNxphfJHU-PVLApQOd8-rW8pNmMBN0wnhZCJFeMpZ-61xRHjw2uAFubofUlJQKDWsx-PsVljyQ4q0fKf7TO-dz_3"
+        />
         {/* Grid overlay */}
         <div className="absolute inset-0 grid-overlay opacity-40" />
-        {/* Large gradient blobs */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#00D4AA]/8 blur-[150px] rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#41EEC2]/5 blur-[120px] rounded-full" />
-        <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[#006b55]/10 blur-[100px] rounded-full" />
-
         {/* SVG Data Mesh — BEHIND text, covering full width */}
         <div className="absolute inset-0 opacity-60">
           <HeroSVG />
         </div>
+        {/* Large gradient blobs */}
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#00D4AA]/8 blur-[150px] rounded-full" />
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#41EEC2]/5 blur-[120px] rounded-full" />
+        <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-[#006b55]/10 blur-[100px] rounded-full" />
 
         {/* Bottom gradient fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#071325] to-transparent" />
@@ -155,12 +162,11 @@ export default async function HomePage({
                   ))}
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="absolute right-0 bottom-0 w-2/3 h-full object-cover mix-blend-overlay opacity-30"
                   style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
-                  alt="Abstract neural network visualization"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEuPGaD74Mol-c-eeF42jwJw50fAEBEoKlnYNOM04YItCCukr38PfGASZv20ZB9pUj-ijuDMG3AcIDyVjnvQejhKPURZTQQrudpyC5ytUX6DLvCC7KDGDcEkiO9ydvP6ZZ67qnsndNVaJpoEYNSk_1DoDZZF1D0oj0qIL22bGY5cXusg7PTR16xWYfHRzDEf9YSFu40YXG_0xG89AkcqDhPdP-rPN47k7H4gX66rc244y4lMGruWBcUdPMM5mLcAuB2dPvW8xXv4g"
+                  alt="Neural network brain visualization"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJV7XSG2naM3lDnXVUb2087QI8CJZT670uu-0Lf3QH0WxJaZX0KYWxLXkMFg02iCXUQLJorgzxb0Kp1pxotgUT01LsTuC-XR8T5eRmV616W5i2AY17MZs0NzSZajobJ7VJafpX4-m5bN0wVxpA10_WAXX1io6IbS5k4-xphFrmVPlQeoljmNnOxc6U6Oiz-Taa0cN1_qgOCFJZ2QBJD7r4TxhMy6BTqHukQTKVRNT8Nb3yipwbAPdTi34ZzlR-A7UYkDCDqOwqGJ1r"
                 />
               </div>
             </StaggerItem>
@@ -241,11 +247,10 @@ export default async function HomePage({
             <SlideIn direction="left" className="lg:col-span-7">
               <div className="glass-card p-1 rounded-2xl border border-outline-variant/10 hover:border-primary/30 overflow-hidden group transition-all">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
-                  alt="Industrial engineering setting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuACH2d3zERucNo95670gPE7MgbJhQF5-xSvyqTTc1Z-_5emFUuSS41CgrPhBPzlFf3lCdh34gCbZiZsD7wsN6jYAopUpHN5sB8F6lGNGaSZ_lIcgT2ar5FIxCFUgfpqG0-K8tG1ncJDzkbemouK_Io1de6L0NZQmdY861AQI-1rRZQx6_zU6LHRPwaG7l6SNRxMQrVykNSen1LyQ7bO4rLwfL2V4dP88ea3PCIoYiH4PnHphkajYwRyixQOupTYp86d_-rc6beUxZNj"
+                  alt="Automotive factory production line"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97lkn2nAdekVVTHkIkNtINSJMjDpdIsJKY_gqYVLVpiH_nHBKO5TPjNGYc35_hByYfqhoYaxSc7WTyEHzSGbgrecTdkJbFGGv6fsHDT7-ZFglTXe7LevHx7mi2L23pf1U8vMfLn4f6Qxqr2RCeSc9CSUDscJO2THQPWz6sA5Tl6GEE3piGUZA_0S0c3JLfo0ykiv4KRv1UtoIFMG-CDOjogwTExjtBl2MXTX4drRb6jj08Bh0mNX5nG7NACqpKjMi4x6jU_cKJ8Cu"
                 />
               </div>
             </SlideIn>
@@ -303,12 +308,7 @@ export default async function HomePage({
 
           {/* Trust Logos */}
           <FadeIn>
-            <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 grayscale opacity-40">
-              <div className="text-3xl font-black font-headline tracking-tighter">SCHAEFFLER</div>
-              <div className="text-3xl font-black font-headline tracking-tighter italic">EY</div>
-              <div className="text-3xl font-black font-headline tracking-tighter">Microsoft</div>
-              <div className="text-3xl font-black font-headline tracking-tighter">Salesforce</div>
-            </div>
+            <TrustLogos />
           </FadeIn>
         </div>
       </section>

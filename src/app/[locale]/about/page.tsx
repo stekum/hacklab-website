@@ -24,7 +24,16 @@ export default async function AboutPage({
           <SlideIn direction="left">
             <h2 className="text-4xl md:text-5xl font-headline font-bold mb-8 tracking-tighter leading-[0.9]">{t("story_title")}</h2>
             <p className="text-lg text-[#d7e3fc]/60 leading-relaxed mb-6">{t("story_p1")}</p>
-            <p className="text-lg text-[#d7e3fc]/60 leading-relaxed">{t("story_p2")}</p>
+            <p className="text-lg text-[#d7e3fc]/60 leading-relaxed mb-8">{t("story_p2")}</p>
+            {/* Tech Office image */}
+            <div className="rounded-xl overflow-hidden border border-outline-variant/10 group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                alt="HackLab modern tech office"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMqsAwWtV0mxwLpm2jJVBKYCgH2LCgJrI-PaMNUIwT8uxRz5-AWLsJE2xVT3dyw6dqQ66wNQYM1sJV8YM4DVF0XsDbsXI8Mb8-33twE_6WM2X30aVJgrWhSKeFx7JJqdbacCcabCaAbiS2mObKxBY_ceJfEcJBA5OeMHcgUjI5NZ8LpoZw7xf_Cy9czh3mS0_zlhzCmphHJBbmwkyWtYUzR6KdIz1Ign5s1IH63q93A6tmigmodGM84CtG9SyVaN2hcFOglo1ja9KV"
+              />
+            </div>
           </SlideIn>
           <SlideIn direction="right">
             {/* Founder card with gradient border */}

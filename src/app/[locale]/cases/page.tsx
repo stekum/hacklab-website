@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CTASection } from "@/components/CTASection";
+import { TrustLogos } from "@/components/CompanyLogos";
 import { PageHero } from "@/components/PageHero";
 import { AnimatedCounter, FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
@@ -27,8 +28,8 @@ export default async function CasesPage({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   className="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
-                  alt="Industrial engineering setting"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuACH2d3zERucNo95670gPE7MgbJhQF5-xSvyqTTc1Z-_5emFUuSS41CgrPhBPzlFf3lCdh34gCbZiZsD7wsN6jYAopUpHN5sB8F6lGNGaSZ_lIcgT2ar5FIxCFUgfpqG0-K8tG1ncJDzkbemouK_Io1de6L0NZQmdY861AQI-1rRZQx6_zU6LHRPwaG7l6SNRxMQrVykNSen1LyQ7bO4rLwfL2V4dP88ea3PCIoYiH4PnHphkajYwRyixQOupTYp86d_-rc6beUxZNj"
+                  alt="Automotive factory production line"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97lkn2nAdekVVTHkIkNtINSJMjDpdIsJKY_gqYVLVpiH_nHBKO5TPjNGYc35_hByYfqhoYaxSc7WTyEHzSGbgrecTdkJbFGGv6fsHDT7-ZFglTXe7LevHx7mi2L23pf1U8vMfLn4f6Qxqr2RCeSc9CSUDscJO2THQPWz6sA5Tl6GEE3piGUZA_0S0c3JLfo0ykiv4KRv1UtoIFMG-CDOjogwTExjtBl2MXTX4drRb6jj08Bh0mNX5nG7NACqpKjMi4x6jU_cKJ8Cu"
                 />
               </div>
             </SlideIn>
@@ -109,6 +110,15 @@ export default async function CasesPage({
               </ScaleIn>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Trust Logos */}
+      <section className="py-16 px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <FadeIn>
+            <TrustLogos />
+          </FadeIn>
         </div>
       </section>
 
