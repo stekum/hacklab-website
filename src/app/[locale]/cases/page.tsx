@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
-import { FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations";
+import { AnimatedCounter, FadeIn, ScaleIn, SlideIn, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default async function CasesPage({
   params,
@@ -17,8 +17,9 @@ export default async function CasesPage({
     <>
       <PageHero label={t("hero_label")} title={t("hero_title")} description={t("hero_desc")} />
 
-      {/* Featured: Schaeffler */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      {/* Featured: Schaeffler — dominant with large image */}
+      <section className="py-24 px-8 bg-surface-container-low relative">
+        <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <SlideIn direction="left" className="lg:col-span-7">
@@ -35,20 +36,20 @@ export default async function CasesPage({
               <div className="space-y-8">
                 <div>
                   <div className="text-primary font-bold text-sm tracking-widest uppercase mb-2">{t("featured_label")}</div>
-                  <h2 className="text-4xl font-headline font-bold mb-4">{t("schaeffler_title")}</h2>
+                  <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4 tracking-tighter leading-[0.9]">{t("schaeffler_title")}</h2>
                 </div>
                 <div className="space-y-6">
                   <div className="p-6 bg-surface-container rounded-lg border-l-4 border-primary">
                     <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-primary">{t("challenge_label")}</h4>
-                    <p className="text-on-surface/70">{t("challenge_text")}</p>
+                    <p className="text-[#d7e3fc]/60">{t("challenge_text")}</p>
                   </div>
                   <div className="p-6 bg-surface-container rounded-lg border-l-4 border-secondary">
                     <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-secondary">{t("approach_label")}</h4>
-                    <p className="text-on-surface/70">{t("approach_text")}</p>
+                    <p className="text-[#d7e3fc]/60">{t("approach_text")}</p>
                   </div>
                   <div className="p-6 bg-surface-container rounded-lg border-l-4 border-on-surface-variant">
                     <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-on-surface-variant">{t("result_label")}</h4>
-                    <p className="text-on-surface/70">{t("result_text")}</p>
+                    <p className="text-[#d7e3fc]/60">{t("result_text")}</p>
                   </div>
                 </div>
               </div>
@@ -58,23 +59,26 @@ export default async function CasesPage({
       </section>
 
       {/* Additional Cases */}
-      <section className="py-24 px-8">
+      <section className="py-24 px-8 relative">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             { title: t("case2_title"), industry: t("case2_industry"), desc: t("case2_desc"), result: t("case2_result"), icon: "analytics" },
             { title: t("case3_title"), industry: t("case3_industry"), desc: t("case3_desc"), result: t("case3_result"), icon: "smart_toy" },
           ].map((cs) => (
             <StaggerItem key={cs.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 h-full transition-all group">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="material-symbols-outlined text-primary text-3xl">{cs.icon}</span>
+                  <div className="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center transition-colors group-hover:bg-primary/25">
+                    <span className="material-symbols-outlined text-primary text-2xl group-hover:text-[#41EEC2] transition-colors">{cs.icon}</span>
+                  </div>
                   <span className="px-3 py-1 bg-surface-container-highest rounded text-xs text-primary font-bold uppercase tracking-wider">{cs.industry}</span>
                 </div>
-                <h3 className="text-2xl font-headline font-bold mb-4">{cs.title}</h3>
-                <p className="text-on-surface/60 leading-relaxed mb-6">{cs.desc}</p>
+                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{cs.title}</h3>
+                <p className="text-[#d7e3fc]/50 leading-relaxed mb-6">{cs.desc}</p>
                 <div className="p-4 bg-surface-container rounded-lg border-l-4 border-primary">
                   <div className="text-xs font-bold uppercase tracking-wider text-primary mb-1">{t("result_label_short")}</div>
-                  <p className="text-on-surface/80 text-sm font-medium">{cs.result}</p>
+                  <p className="text-[#d7e3fc]/70 text-sm font-medium">{cs.result}</p>
                 </div>
               </div>
             </StaggerItem>
@@ -82,22 +86,25 @@ export default async function CasesPage({
         </StaggerContainer>
       </section>
 
-      {/* Metrics */}
-      <section className="py-24 px-8 bg-surface-container-lowest">
+      {/* Metrics — with AnimatedCounter */}
+      <section className="py-24 px-8 bg-surface-container-lowest relative">
+        <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <h2 className="text-3xl font-headline font-bold text-center mb-12">{t("metrics_title")}</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold text-center mb-12 tracking-tighter">{t("metrics_title")}</h2>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             {[
-              { value: "50+", label: tMetrics("projects") },
-              { value: "15+", label: tMetrics("years") },
-              { value: "3", label: tMetrics("continents") },
+              { target: 50, suffix: "+", label: tMetrics("projects") },
+              { target: 15, suffix: "+", label: tMetrics("years") },
+              { target: 3, suffix: "", label: tMetrics("continents") },
             ].map((metric) => (
               <ScaleIn key={metric.label}>
                 <div className="p-12 glass-card rounded-lg border border-outline-variant/5 hover:border-primary/30 transition-all">
-                  <div className="text-6xl font-headline font-black gradient-text mb-2">{metric.value}</div>
-                  <div className="text-on-surface/40 uppercase tracking-widest text-xs font-bold">{metric.label}</div>
+                  <div className="text-7xl md:text-8xl font-headline font-black gradient-text mb-2">
+                    <AnimatedCounter target={metric.target} suffix={metric.suffix} />
+                  </div>
+                  <div className="text-[#d7e3fc]/40 uppercase tracking-widest text-xs font-bold">{metric.label}</div>
                 </div>
               </ScaleIn>
             ))}

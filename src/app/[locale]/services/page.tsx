@@ -21,26 +21,27 @@ export default async function ServicesPage({
     <>
       <PageHero label={t("hero_label")} title={t("hero_title")} description={t("hero_desc")} />
 
-      {/* Featured: Agentic AI */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      {/* Featured: Agentic AI — MUCH bigger */}
+      <section className="py-24 px-8 bg-surface-container-low relative">
+        <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col lg:flex-row gap-12 overflow-hidden relative min-h-[400px] transition-all">
+            <div className="glass-card p-12 md:p-16 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col lg:flex-row gap-12 overflow-hidden relative min-h-[500px] transition-all group">
               <div className="relative z-10 lg:w-2/3">
-                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-primary text-3xl">psychology</span>
+                <div className="w-20 h-20 bg-primary/20 rounded-xl flex items-center justify-center mb-8 transition-colors group-hover:bg-primary/30">
+                  <span className="material-symbols-outlined text-primary text-4xl group-hover:text-[#41EEC2] transition-colors">psychology</span>
                 </div>
-                <h2 className="text-4xl font-headline font-bold mb-6">{t("ai_featured_title")}</h2>
-                <p className="text-xl text-on-surface/60 leading-relaxed mb-8">{t("ai_featured_desc")}</p>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold mb-6 tracking-tight">{t("ai_featured_title")}</h2>
+                <p className="text-xl text-[#d7e3fc]/50 leading-relaxed mb-8">{t("ai_featured_desc")}</p>
                 <div className="flex flex-wrap gap-3">
                   {[t("ai_pill_1"), t("ai_pill_2"), t("ai_pill_3"), t("ai_pill_4"), t("ai_pill_5")].map((pill) => (
-                    <span key={pill} className="px-4 py-2 bg-surface-container-highest rounded text-sm text-primary font-medium">{pill}</span>
+                    <span key={pill} className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm text-primary font-medium border border-[#00D4AA]/10">{pill}</span>
                   ))}
                 </div>
               </div>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-20 hidden lg:block"
+                className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-25 hidden lg:block"
                 style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
                 alt="AI visualization"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJEuPGaD74Mol-c-eeF42jwJw50fAEBEoKlnYNOM04YItCCukr38PfGASZv20ZB9pUj-ijuDMG3AcIDyVjnvQejhKPURZTQQrudpyC5ytUX6DLvCC7KDGDcEkiO9ydvP6ZZ67qnsndNVaJpoEYNSk_1DoDZZF1D0oj0qIL22bGY5cXusg7PTR16xWYfHRzDEf9YSFu40YXG_0xG89AkcqDhPdP-rPN47k7H4gX66rc244y4lMGruWBcUdPMM5mLcAuB2dPvW8xXv4g"
@@ -50,8 +51,9 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* Service Cards Grid */}
-      <section className="py-24 px-8">
+      {/* Service Cards Grid — with icon containers */}
+      <section className="py-24 px-8 relative">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             { icon: "architecture", title: t("platform_title"), desc: t("platform_desc"), items: ["Databricks & Microsoft Fabric", "Cloud Migration (Azure/AWS)", "Data Governance Frameworks"] },
@@ -60,14 +62,16 @@ export default async function ServicesPage({
             { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc"), items: ["Carbon Footprint Engine", "Supply Chain Transparency", "EU Taxonomy Compliance"] },
           ].map((service) => (
             <StaggerItem key={service.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full">
-                <span className="material-symbols-outlined text-primary text-4xl mb-6 block">{service.icon}</span>
-                <h3 className="text-2xl font-headline font-bold mb-4">{service.title}</h3>
-                <p className="text-on-surface/60 leading-relaxed mb-8">{service.desc}</p>
-                <ul className="space-y-3 text-sm font-medium text-on-surface/80">
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group">
+                <div className="w-14 h-14 bg-primary/15 rounded-lg flex items-center justify-center mb-6 transition-colors group-hover:bg-primary/25">
+                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">{service.icon}</span>
+                </div>
+                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{service.title}</h3>
+                <p className="text-[#d7e3fc]/50 leading-relaxed mb-8">{service.desc}</p>
+                <ul className="space-y-3 text-sm font-medium text-[#d7e3fc]/70">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <span className="w-1 h-1 bg-primary rounded-full" /> {item}
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" /> {item}
                     </li>
                   ))}
                 </ul>
@@ -77,16 +81,16 @@ export default async function ServicesPage({
         </StaggerContainer>
       </section>
 
-      {/* Tech Stack */}
+      {/* Tech Stack — logo-sized pills */}
       <section className="py-24 px-8 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto text-center">
           <FadeIn>
-            <h2 className="text-3xl font-headline font-bold mb-12">{t("tech_title")}</h2>
+            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-12 tracking-tighter">{t("tech_title")}</h2>
           </FadeIn>
-          <StaggerContainer className="flex flex-wrap justify-center gap-6">
+          <StaggerContainer className="flex flex-wrap justify-center gap-4">
             {techStack.map((tech) => (
               <StaggerItem key={tech}>
-                <div className="px-6 py-3 glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 text-on-surface/70 font-medium text-sm transition-all">{tech}</div>
+                <div className="px-6 py-3 glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 text-[#d7e3fc]/70 font-bold text-sm tracking-tight transition-all hover:text-primary">{tech}</div>
               </StaggerItem>
             ))}
           </StaggerContainer>

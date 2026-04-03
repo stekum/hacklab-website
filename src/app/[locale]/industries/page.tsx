@@ -17,19 +17,20 @@ export default async function IndustriesPage({
       <PageHero label={t("hero_label")} title={t("hero_title")} description={t("hero_desc")} />
 
       {/* Primary Industry */}
-      <section className="py-24 px-8 bg-surface-container-low">
+      <section className="py-24 px-8 bg-surface-container-low relative">
+        <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="glass-card p-12 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col lg:flex-row gap-12 overflow-hidden relative transition-all">
+            <div className="glass-card p-12 md:p-16 rounded-lg border border-outline-variant/10 hover:border-primary/30 flex flex-col lg:flex-row gap-12 overflow-hidden relative transition-all group">
               <div className="relative z-10 lg:w-2/3">
-                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-primary text-3xl">directions_car</span>
+                <div className="w-20 h-20 bg-primary/20 rounded-xl flex items-center justify-center mb-8 transition-colors group-hover:bg-primary/30">
+                  <span className="material-symbols-outlined text-primary text-4xl group-hover:text-[#41EEC2] transition-colors">directions_car</span>
                 </div>
-                <h2 className="text-4xl font-headline font-bold mb-6">{t("auto_title")}</h2>
-                <p className="text-xl text-on-surface/60 leading-relaxed mb-8">{t("auto_desc")}</p>
+                <h2 className="text-4xl md:text-5xl font-headline font-bold mb-6 tracking-tighter">{t("auto_title")}</h2>
+                <p className="text-xl text-[#d7e3fc]/50 leading-relaxed mb-8">{t("auto_desc")}</p>
                 <div className="flex flex-wrap gap-3">
                   {[t("auto_item_1"), t("auto_item_2"), t("auto_item_3"), t("auto_item_4")].map((item) => (
-                    <span key={item} className="px-4 py-2 bg-surface-container-highest rounded text-sm text-primary font-medium">{item}</span>
+                    <span key={item} className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm text-primary font-medium border border-[#00D4AA]/10">{item}</span>
                   ))}
                 </div>
               </div>
@@ -46,19 +47,20 @@ export default async function IndustriesPage({
       </section>
 
       {/* Secondary Industries */}
-      <section className="py-24 px-8">
+      <section className="py-24 px-8 relative">
+        <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             { icon: "factory", title: t("manufacturing_title"), desc: t("manufacturing_desc") },
             { icon: "account_balance", title: t("finance_title"), desc: t("finance_desc") },
           ].map((industry) => (
             <StaggerItem key={industry.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full">
-                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-primary text-3xl">{industry.icon}</span>
+              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group">
+                <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center mb-8 transition-colors group-hover:bg-primary/25">
+                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">{industry.icon}</span>
                 </div>
-                <h3 className="text-2xl font-headline font-bold mb-4">{industry.title}</h3>
-                <p className="text-on-surface/60 leading-relaxed">{industry.desc}</p>
+                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{industry.title}</h3>
+                <p className="text-[#d7e3fc]/50 leading-relaxed">{industry.desc}</p>
               </div>
             </StaggerItem>
           ))}
@@ -66,27 +68,31 @@ export default async function IndustriesPage({
       </section>
 
       {/* Cross-Industry */}
-      <section className="py-24 px-8 bg-surface-container-lowest">
+      <section className="py-24 px-8 bg-surface-container-lowest relative">
+        <div className="absolute -top-40 right-1/4 w-[500px] h-[500px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center mb-16">
-              <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-4">Cross-Industry</span>
-              <h2 className="text-4xl font-headline font-bold">{t("cross_title")}</h2>
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#00D4AA]/10 border border-[#00D4AA]/20 rounded-full text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                <span className="w-2 h-2 rounded-full bg-primary glow-pulse" />
+                Cross-Industry
+              </span>
+              <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">{t("cross_title")}</h2>
             </div>
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc") },
-              { icon: "cloud_sync", title: t("digital_title"), desc: t("digital_desc") },
-              { icon: "smart_toy", title: t("ai_readiness_title"), desc: t("ai_readiness_desc") },
+              { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc"), color: "bg-[#00D4AA]/15" },
+              { icon: "cloud_sync", title: t("digital_title"), desc: t("digital_desc"), color: "bg-[#41EEC2]/15" },
+              { icon: "smart_toy", title: t("ai_readiness_title"), desc: t("ai_readiness_desc"), color: "bg-[#ffcea6]/15" },
             ].map((item) => (
               <StaggerItem key={item.icon}>
-                <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full text-center">
-                  <div className="w-20 h-20 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-8">
-                    <span className="material-symbols-outlined text-primary text-4xl">{item.icon}</span>
+                <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full text-center group">
+                  <div className={`w-20 h-20 ${item.color} rounded-xl flex items-center justify-center mx-auto mb-8 transition-all group-hover:scale-110`}>
+                    <span className="material-symbols-outlined text-primary text-4xl group-hover:text-[#41EEC2] transition-colors">{item.icon}</span>
                   </div>
-                  <h3 className="text-xl font-headline font-bold mb-4">{item.title}</h3>
-                  <p className="text-on-surface/60 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-xl font-headline font-bold mb-4 tracking-tight">{item.title}</h3>
+                  <p className="text-[#d7e3fc]/50 leading-relaxed">{item.desc}</p>
                 </div>
               </StaggerItem>
             ))}
