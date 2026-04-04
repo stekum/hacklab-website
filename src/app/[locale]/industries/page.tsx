@@ -38,32 +38,57 @@ export default async function IndustriesPage({
               <img
                 className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-30 hidden lg:block"
                 style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
-                alt="Automotive factory production line"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97lkn2nAdekVVTHkIkNtINSJMjDpdIsJKY_gqYVLVpiH_nHBKO5TPjNGYc35_hByYfqhoYaxSc7WTyEHzSGbgrecTdkJbFGGv6fsHDT7-ZFglTXe7LevHx7mi2L23pf1U8vMfLn4f6Qxqr2RCeSc9CSUDscJO2THQPWz6sA5Tl6GEE3piGUZA_0S0c3JLfo0ykiv4KRv1UtoIFMG-CDOjogwTExjtBl2MXTX4drRb6jj08Bh0mNX5nG7NACqpKjMi4x6jU_cKJ8Cu"
+                alt="ESG sustainability factory with green technology"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbKQEGU9gdBEh2CwA_tpoKHqfgZo6Xjzs_dYLBZGds2N__fqD5gzlxaEORnZqPuYVdi9kHS4y9dDryRp8wa1ExuRHEPTQHugBZj5VjdzUTKMCHCyy_GRp2ot-MbLkEBmiv1NcNAis_Sd_5Uo5PFqBOQpJl656mCrPJaNPBjkZw6OdKGy5ovl0kHcMTg8TrRQnZapUskG-YFHF9j5kT8Rm50Lym8YNWiB2-e3PN4wa15C1xp5vFPHCmrse0O_siMwf4FXv9Fh8RXTc0"
               />
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Secondary Industries */}
+      {/* Secondary Industries — visual grid with images */}
       <section className="py-24 px-8 relative">
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
-        <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
-            { icon: "factory", title: t("manufacturing_title"), desc: t("manufacturing_desc") },
-            { icon: "account_balance", title: t("finance_title"), desc: t("finance_desc") },
-          ].map((industry) => (
-            <StaggerItem key={industry.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group">
-                <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center mb-8 transition-colors group-hover:bg-primary/25">
-                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">{industry.icon}</span>
+        <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* Manufacturing — large card */}
+          <StaggerItem className="md:col-span-7">
+            <div className="glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group overflow-hidden relative min-h-[400px] flex flex-col justify-end">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                alt="Analytics dashboard with data visualizations"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzq_9l5G3XEnGRhbzfJ5yTB4sTxyiwXas84uQ_L7lETYmmsCShYVyjlmPEw1J6y9nWn3y9byW30dNwK2YU87vPGRhezD7sfdTP48OceNeXAjavoXTBP5ZrTyZ4-oq9LX6CCAR44V9CvuKcuPS7Mss8YnDIZMT9K8ZAlR6KSuka2Sj8UW1yY3GiidjCw0pd_y9EOwuEw9XijvwFYyJhQ937WrbPJ7xDTO5mPW5RlDZeEYCXTkcLPbNd318NytL4TXAL9MMLsersLe8H"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071325] via-[#071325]/60 to-transparent" />
+              <div className="relative z-10 p-10">
+                <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-primary/25">
+                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">factory</span>
                 </div>
-                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{industry.title}</h3>
-                <p className="text-[#d7e3fc]/50 leading-relaxed">{industry.desc}</p>
+                <h3 className="text-3xl font-headline font-bold mb-4 tracking-tight">{t("manufacturing_title")}</h3>
+                <p className="text-[#d7e3fc]/60 leading-relaxed max-w-lg">{t("manufacturing_desc")}</p>
               </div>
-            </StaggerItem>
-          ))}
+            </div>
+          </StaggerItem>
+
+          {/* Financial Services — medium card with trading floor image */}
+          <StaggerItem className="md:col-span-5">
+            <div className="glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group overflow-hidden relative min-h-[400px] flex flex-col justify-end">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-500 group-hover:opacity-30"
+                alt="Financial trading floor with data screens"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADElVeOHI4La4iolggafun8m2bZ-ySKYnt_O3fd1NKcZk3jM80f23tj91_mU3nllUoauQKIEIvQgbGuHJSYC4tDdT4pkJ-VOyCo5zXjHKM1RumWrj8XzDLoxg-E2RxxABSFUxY1LsxBSC3nT77H3ofjZJGdr2y0oB7GpGylCJxbPm3E9tsTsX_Aac84kv2DBkHJmqyfT6GUiRBufrlzKrnMYzjqN1Eas9-6zDYBEEULNOLdo7mvVyj8_mZSpcKZ7fIIMoxTKRwLDdd"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071325] via-[#071325]/60 to-transparent" />
+              <div className="relative z-10 p-10">
+                <div className="w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-primary/25">
+                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">account_balance</span>
+                </div>
+                <h3 className="text-3xl font-headline font-bold mb-4 tracking-tight">{t("finance_title")}</h3>
+                <p className="text-[#d7e3fc]/60 leading-relaxed">{t("finance_desc")}</p>
+              </div>
+            </div>
+          </StaggerItem>
         </StaggerContainer>
       </section>
 

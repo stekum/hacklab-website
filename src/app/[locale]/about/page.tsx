@@ -40,8 +40,8 @@ export default async function AboutPage({
             <div className="glass-card p-10 rounded-lg border border-[#00D4AA]/20 hover:border-[#00D4AA]/40 transition-all relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00D4AA]/5 to-transparent pointer-events-none" />
               <div className="relative z-10">
-                <div className="w-20 h-20 bg-primary/20 rounded-xl flex items-center justify-center mb-8">
-                  <span className="material-symbols-outlined text-primary text-4xl">person</span>
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#00D4AA] to-[#006b55] flex items-center justify-center mb-8">
+                  <span className="text-3xl font-headline font-bold text-white">SK</span>
                 </div>
                 <div className="text-primary font-bold text-xs tracking-widest uppercase mb-2">{t("founder_label")}</div>
                 <h3 className="text-3xl font-headline font-bold mb-4 tracking-tight">{t("founder_name")}</h3>

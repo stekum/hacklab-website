@@ -52,34 +52,50 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* Service Cards Grid — with icon containers */}
+      {/* Service Cards — alternating left-right layout */}
       <section className="py-24 px-8 relative">
         <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
-        <StaggerContainer className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto space-y-12">
           {[
-            { icon: "architecture", title: t("platform_title"), desc: t("platform_desc"), items: ["Databricks & Microsoft Fabric", "Cloud Migration (Azure/AWS)", "Data Governance Frameworks"] },
-            { icon: "monitoring", title: t("ae_title"), desc: t("ae_desc"), items: ["dbt Core Development", "Data Quality Monitoring", "Semantic Layer Design"] },
-            { icon: "settings_input_component", title: t("integration_title"), desc: t("integration_desc"), items: ["SAP S/4HANA Extractors", "API-first Middleware", "Real-time CDC Pipelines"] },
-            { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc"), items: ["Carbon Footprint Engine", "Supply Chain Transparency", "EU Taxonomy Compliance"] },
-          ].map((service) => (
-            <StaggerItem key={service.icon}>
-              <div className="glass-card p-10 rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all h-full group">
-                <div className="w-14 h-14 bg-primary/15 rounded-lg flex items-center justify-center mb-6 transition-colors group-hover:bg-primary/25">
-                  <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">{service.icon}</span>
+            { icon: "architecture", title: t("platform_title"), desc: t("platform_desc"), items: ["Databricks & Microsoft Fabric", "Cloud Migration (Azure/AWS)", "Data Governance Frameworks"], image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCUdgGoEKdz-8lvx7e7VFHSl0aSGMrS3eAmGgAMBCrcWn6_oOUVi46800kfnHUE6oJEEaCCTbveVqC00z4aBVP8RcQkWAdWjP2uA9QLgHYHh0n45BR79TYcPc4DsnXyAz8Z6RUcOs6yA65f4Q-POhBdDOIG-zHsBXyBUGWY-8vjzjFR6id_YmY4HNxphfJHU-PVLApQOd8-rW8pNmMBN0wnhZCJFeMpZ-61xRHjw2uAFubofUlJQKDWsx-PsVljyQ4q0fKf7TO-dz_3", imageAlt: "Data command center visualization" },
+            { icon: "monitoring", title: t("ae_title"), desc: t("ae_desc"), items: ["dbt Core Development", "Data Quality Monitoring", "Semantic Layer Design"], image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzq_9l5G3XEnGRhbzfJ5yTB4sTxyiwXas84uQ_L7lETYmmsCShYVyjlmPEw1J6y9nWn3y9byW30dNwK2YU87vPGRhezD7sfdTP48OceNeXAjavoXTBP5ZrTyZ4-oq9LX6CCAR44V9CvuKcuPS7Mss8YnDIZMT9K8ZAlR6KSuka2Sj8UW1yY3GiidjCw0pd_y9EOwuEw9XijvwFYyJhQ937WrbPJ7xDTO5mPW5RlDZeEYCXTkcLPbNd318NytL4TXAL9MMLsersLe8H", imageAlt: "Analytics dashboard with data insights" },
+            { icon: "settings_input_component", title: t("integration_title"), desc: t("integration_desc"), items: ["SAP S/4HANA Extractors", "API-first Middleware", "Real-time CDC Pipelines"], image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCMqsAwWtV0mxwLpm2jJVBKYCgH2LCgJrI-PaMNUIwT8uxRz5-AWLsJE2xVT3dyw6dqQ66wNQYM1sJV8YM4DVF0XsDbsXI8Mb8-33twE_6WM2X30aVJgrWhSKeFx7JJqdbacCcabCaAbiS2mObKxBY_ceJfEcJBA5OeMHcgUjI5NZ8LpoZw7xf_Cy9czh3mS0_zlhzCmphHJBbmwkyWtYUzR6KdIz1Ign5s1IH63q93A6tmigmodGM84CtG9SyVaN2hcFOglo1ja9KV", imageAlt: "Modern tech office workspace" },
+            { icon: "eco", title: t("sustainability_title"), desc: t("sustainability_desc"), items: ["Carbon Footprint Engine", "Supply Chain Transparency", "EU Taxonomy Compliance"], image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDbKQEGU9gdBEh2CwA_tpoKHqfgZo6Xjzs_dYLBZGds2N__fqD5gzlxaEORnZqPuYVdi9kHS4y9dDryRp8wa1ExuRHEPTQHugBZj5VjdzUTKMCHCyy_GRp2ot-MbLkEBmiv1NcNAis_Sd_5Uo5PFqBOQpJl656mCrPJaNPBjkZw6OdKGy5ovl0kHcMTg8TrRQnZapUskG-YFHF9j5kT8Rm50Lym8YNWiB2-e3PN4wa15C1xp5vFPHCmrse0O_siMwf4FXv9Fh8RXTc0", imageAlt: "Sustainable factory with green technology" },
+          ].map((service, index) => (
+            <FadeIn key={service.icon}>
+              <div className={`glass-card rounded-lg border border-outline-variant/10 hover:border-primary/30 transition-all group overflow-hidden relative`}>
+                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[320px]`}>
+                  {/* Image side */}
+                  <div className="lg:w-2/5 relative min-h-[200px] lg:min-h-0">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      className="absolute inset-0 w-full h-full object-cover opacity-30 transition-opacity duration-500 group-hover:opacity-40"
+                      alt={service.imageAlt}
+                      src={service.image}
+                    />
+                    <div className={`absolute inset-0 ${index % 2 === 0 ? 'bg-gradient-to-r' : 'bg-gradient-to-l'} from-transparent to-[#0c1a2e]/80 hidden lg:block`} />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0c1a2e]/80 lg:hidden" />
+                  </div>
+                  {/* Content side */}
+                  <div className="lg:w-3/5 p-10 relative z-10">
+                    <div className="w-14 h-14 bg-primary/15 rounded-lg flex items-center justify-center mb-6 transition-colors group-hover:bg-primary/25">
+                      <span className="material-symbols-outlined text-primary text-3xl group-hover:text-[#41EEC2] transition-colors">{service.icon}</span>
+                    </div>
+                    <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{service.title}</h3>
+                    <p className="text-[#d7e3fc]/50 leading-relaxed mb-8">{service.desc}</p>
+                    <ul className="space-y-3 text-sm font-medium text-[#d7e3fc]/70">
+                      {service.items.map((item) => (
+                        <li key={item} className="flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" /> {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{service.title}</h3>
-                <p className="text-[#d7e3fc]/50 leading-relaxed mb-8">{service.desc}</p>
-                <ul className="space-y-3 text-sm font-medium text-[#d7e3fc]/70">
-                  {service.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" /> {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </StaggerItem>
+            </FadeIn>
           ))}
-        </StaggerContainer>
+        </div>
       </section>
 
       {/* Tech Stack — logo-sized pills */}
