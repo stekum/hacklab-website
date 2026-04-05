@@ -23,8 +23,9 @@ export function Header() {
   return (
     <nav className="fixed top-0 w-full z-[100] bg-[#071325]/60 backdrop-blur-xl border-b border-[#3b4a44]/15 shadow-[0_40px_60px_-5px_rgba(215,227,252,0.04)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-        <Link href="/" className="text-xl font-black tracking-tighter text-[#d7e3fc] font-headline">
-          HackLab
+        <Link href="/" className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-8" />
         </Link>
 
         {/* Desktop Nav */}

@@ -8,8 +8,9 @@ export function Footer() {
     <footer className="w-full py-20 px-8 border-t border-[#3b4a44]/15 bg-[#030e20]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <div className="text-lg font-bold text-[#d7e3fc] font-headline">
-            HackLab
+          <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-7" />
           </div>
           <p className="font-body text-sm leading-relaxed text-[#d7e3fc]/60 max-w-xs">
             {t("description")}
