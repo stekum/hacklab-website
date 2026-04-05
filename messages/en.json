@@ -61,7 +61,7 @@
   "cases_section": {
     "title": "Case Studies",
     "featured_label": "Featured Project",
-    "schaeffler_title": "Schaeffler — ESG Data Platform on Microsoft Fabric",
+    "schaeffler_title": "Schaeffler –ESG Data Platform on Microsoft Fabric",
     "challenge_label": "Challenge",
     "challenge_text": "Fragmented sustainability data across 50+ global sites without a central control system.",
     "approach_label": "Approach",
@@ -81,7 +81,7 @@
     "prop2_title": "4 Weeks to MVP",
     "prop2_desc": "Rapid validation through focused prototypes instead of months of concept phases.",
     "prop3_title": "Measurable Results",
-    "prop3_desc": "We measure success by business impact — not by delivered slides or booked consulting days."
+    "prop3_desc": "We measure success by business impact –not by delivered slides or booked consulting days."
   },
   "cta": {
     "title": "Ready for AI-ready Data?",
@@ -111,7 +111,7 @@
   "services_page": {
     "hero_label": "What We Do",
     "hero_title": "Our Services",
-    "hero_desc": "From data strategy to production AI solutions — we guide you every step of the way.",
+    "hero_desc": "From data strategy to production AI solutions –we guide you every step of the way.",
     "ai_featured_title": "Agentic AI & Automation",
     "ai_featured_desc": "We don't just build simple chatbots. We build agent systems with access to your enterprise data, executing complex tasks autonomously and radically shortening business processes.",
     "ai_pill_1": "LLM Orchestration",
@@ -137,7 +137,7 @@
     "hero_title": "Boutique. Senior. Hands-on.",
     "hero_desc": "We're not a consulting factory. We're a team of experienced architects and engineers who'd rather build than present.",
     "story_title": "Our Story",
-    "story_p1": "HackLab was founded with a clear conviction: enterprises don't need more PowerPoint slides — they need working data platforms.",
+    "story_p1": "HackLab was founded with a clear conviction: enterprises don't need more PowerPoint slides –they need working data platforms.",
     "story_p2": "We combine deep technical understanding with strategic thinking. Short decision paths, senior expertise from day one, and real engineering depth instead of consultant rotation.",
     "founder_label": "Founder & Managing Director",
     "founder_name": "Stefan Kummert",
@@ -160,7 +160,7 @@
   "contact_page": {
     "hero_label": "Let's Talk",
     "hero_title": "Contact",
-    "hero_desc": "Tell us about your project — we'll get back to you within 24 hours.",
+    "hero_desc": "Tell us about your project –we'll get back to you within 24 hours.",
     "form_name": "Name",
     "form_email": "Email",
     "form_company": "Company",
@@ -189,7 +189,7 @@
     "hero_title": "Case Studies",
     "hero_desc": "Selected projects that show how we turn data into strategic assets.",
     "featured_label": "Featured Project",
-    "schaeffler_title": "Schaeffler — ESG Data Platform on Microsoft Fabric",
+    "schaeffler_title": "Schaeffler –ESG Data Platform on Microsoft Fabric",
     "challenge_label": "Challenge",
     "challenge_text": "Fragmented sustainability data across 50+ global sites without a central control system.",
     "approach_label": "Approach",

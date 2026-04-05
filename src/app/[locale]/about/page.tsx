@@ -45,7 +45,7 @@ export default async function AboutPage({
                   <img
                     src="/hacklab-website/stefan-kummert.jpg"
                     alt="Stefan Kummert"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover object-[center_25%] grayscale hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
                 <div className="text-primary font-bold text-xs tracking-widest uppercase mb-2">{t("founder_label")}</div>

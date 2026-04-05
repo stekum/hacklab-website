@@ -61,7 +61,7 @@
   "cases_section": {
     "title": "Referenzen",
     "featured_label": "Featured Project",
-    "schaeffler_title": "Schaeffler — ESG Data Platform auf Microsoft Fabric",
+    "schaeffler_title": "Schaeffler –ESG Data Platform auf Microsoft Fabric",
     "challenge_label": "Challenge",
     "challenge_text": "Fragmentierte Nachhaltigkeitsdaten über 50+ Standorte weltweit ohne zentrales Kontrollsystem.",
     "approach_label": "Approach",
@@ -81,7 +81,7 @@
     "prop2_title": "4 Wochen bis zum MVP",
     "prop2_desc": "Schnelle Validierung durch fokussierte Prototypen statt monatelanger Konzeptphasen.",
     "prop3_title": "Messbare Ergebnisse",
-    "prop3_desc": "Wir messen Erfolg an Business-Impact — nicht an gelieferten Folien oder gebuchten Beratertagen."
+    "prop3_desc": "Wir messen Erfolg an Business-Impact –nicht an gelieferten Folien oder gebuchten Beratertagen."
   },
   "cta": {
     "title": "Bereit für AI-ready Data?",
@@ -111,7 +111,7 @@
   "services_page": {
     "hero_label": "Was wir tun",
     "hero_title": "Unsere Leistungen",
-    "hero_desc": "Von der Datenstrategie bis zur produktiven AI-Lösung — wir begleiten Sie auf dem gesamten Weg.",
+    "hero_desc": "Von der Datenstrategie bis zur produktiven AI-Lösung –wir begleiten Sie auf dem gesamten Weg.",
     "ai_featured_title": "Agentic AI & Automation",
     "ai_featured_desc": "Wir entwickeln nicht nur einfache Chatbots. Wir bauen Agenten-Systeme, die Zugriff auf Ihre Unternehmensdaten haben, komplexe Aufgaben autonom ausführen und Geschäftsprozesse radikal verkürzen.",
     "ai_pill_1": "LLM Orchestration",
@@ -137,7 +137,7 @@
     "hero_title": "Boutique. Senior. Hands-on.",
     "hero_desc": "Wir sind keine Beratungsfabrik. Wir sind ein Team aus erfahrenen Architekten und Engineers, die lieber bauen als präsentieren.",
     "story_title": "Unsere Geschichte",
-    "story_p1": "HackLab wurde mit einer klaren Überzeugung gegründet: Unternehmen brauchen keine weiteren PowerPoint-Folien — sie brauchen funktionierende Datenplattformen.",
+    "story_p1": "HackLab wurde mit einer klaren Überzeugung gegründet: Unternehmen brauchen keine weiteren PowerPoint-Folien –sie brauchen funktionierende Datenplattformen.",
     "story_p2": "Wir verbinden tiefes technisches Verständnis mit strategischem Denken. Kurze Entscheidungswege, Senior-Expertise ab dem ersten Tag, und echte Engineering-Tiefe statt Berater-Rotation.",
     "founder_label": "Gründer & Managing Director",
     "founder_name": "Stefan Kummert",
@@ -160,7 +160,7 @@
   "contact_page": {
     "hero_label": "Sprechen wir darüber",
     "hero_title": "Kontakt",
-    "hero_desc": "Erzählen Sie uns von Ihrem Projekt — wir melden uns innerhalb von 24 Stunden.",
+    "hero_desc": "Erzählen Sie uns von Ihrem Projekt –wir melden uns innerhalb von 24 Stunden.",
     "form_name": "Name",
     "form_email": "E-Mail",
     "form_company": "Firma",
@@ -189,7 +189,7 @@
     "hero_title": "Referenzen",
     "hero_desc": "Ausgewählte Projekte, die zeigen, wie wir Daten in strategische Assets verwandeln.",
     "featured_label": "Featured Project",
-    "schaeffler_title": "Schaeffler — ESG Data Platform auf Microsoft Fabric",
+    "schaeffler_title": "Schaeffler –ESG Data Platform auf Microsoft Fabric",
     "challenge_label": "Challenge",
     "challenge_text": "Fragmentierte Nachhaltigkeitsdaten über 50+ Standorte weltweit ohne zentrales Kontrollsystem.",
     "approach_label": "Approach",
