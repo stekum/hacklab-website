@@ -8,9 +8,20 @@ export function Footer() {
     <footer className="w-full py-20 px-8 border-t border-[#3b4a44]/15 bg-[#030e20]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-12" />
+          <div className="flex items-center gap-2.5">
+            <svg className="h-7 w-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 1L29.86 9v14L16 31 2.14 23V9L16 1z" stroke="#00D4AA" strokeWidth="1.5" fill="none"/>
+              <circle cx="16" cy="10" r="2" fill="#00D4AA"/>
+              <circle cx="10" cy="18" r="2" fill="#00D4AA"/>
+              <circle cx="22" cy="18" r="2" fill="#00D4AA"/>
+              <circle cx="16" cy="24" r="1.5" fill="#41EEC2" opacity="0.6"/>
+              <line x1="16" y1="10" x2="10" y2="18" stroke="#00D4AA" strokeWidth="0.8" opacity="0.5"/>
+              <line x1="16" y1="10" x2="22" y2="18" stroke="#00D4AA" strokeWidth="0.8" opacity="0.5"/>
+              <line x1="10" y1="18" x2="22" y2="18" stroke="#00D4AA" strokeWidth="0.8" opacity="0.5"/>
+              <line x1="10" y1="18" x2="16" y2="24" stroke="#41EEC2" strokeWidth="0.6" opacity="0.3"/>
+              <line x1="22" y1="18" x2="16" y2="24" stroke="#41EEC2" strokeWidth="0.6" opacity="0.3"/>
+            </svg>
+            <span className="text-lg font-bold text-[#d7e3fc] font-headline">HackLab</span>
           </div>
           <p className="font-body text-sm leading-relaxed text-[#d7e3fc]/60 max-w-xs">
             {t("description")}
