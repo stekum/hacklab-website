@@ -40,8 +40,13 @@ export default async function AboutPage({
             <div className="glass-card p-10 rounded-lg border border-[#00D4AA]/20 hover:border-[#00D4AA]/40 transition-all relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00D4AA]/5 to-transparent pointer-events-none" />
               <div className="relative z-10">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#00D4AA] to-[#006b55] flex items-center justify-center mb-8">
-                  <span className="text-3xl font-headline font-bold text-white">SK</span>
+                <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-[#00D4AA]/30 mb-8">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/hacklab-website/stefan-kummert.jpg"
+                    alt="Stefan Kummert"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  />
                 </div>
                 <div className="text-primary font-bold text-xs tracking-widest uppercase mb-2">{t("founder_label")}</div>
                 <h3 className="text-3xl font-headline font-bold mb-4 tracking-tight">{t("founder_name")}</h3>
