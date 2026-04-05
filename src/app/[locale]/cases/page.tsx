@@ -29,7 +29,7 @@ export default async function CasesPage({
                 <img
                   className="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
                   alt="Automotive factory production line"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97lkn2nAdekVVTHkIkNtINSJMjDpdIsJKY_gqYVLVpiH_nHBKO5TPjNGYc35_hByYfqhoYaxSc7WTyEHzSGbgrecTdkJbFGGv6fsHDT7-ZFglTXe7LevHx7mi2L23pf1U8vMfLn4f6Qxqr2RCeSc9CSUDscJO2THQPWz6sA5Tl6GEE3piGUZA_0S0c3JLfo0ykiv4KRv1UtoIFMG-CDOjogwTExjtBl2MXTX4drRb6jj08Bh0mNX5nG7NACqpKjMi4x6jU_cKJ8Cu"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQxnccQDNBx0PFxnKQkP1ebsdveJ2ngWPJevXA2ZAfKYmqTv1HLtX80P7Q2LtzgbnqbNDsTDM6mlhtoUW1TUvjQwvPu_M5tWhahCBNk2TFQK6G_nq0H23Dzr--cIhPO-Z5F2TFyEpoowBG55Fz0GqM0_QhCbm81mQHyWVSrzme6FPfJDF9QmGRq3n_cNg4-AXDfpyXOWNwPJC9eJpZAzn-U6mI0IyPf_4oL74PkfRGDSOS0rAml7OeWDfg5yslqk-4NbprE0N7BTSv"
                 />
               </div>
             </SlideIn>

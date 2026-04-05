@@ -25,7 +25,7 @@ export default async function HomePage({
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-30"
           alt=""
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUdgGoEKdz-8lvx7e7VFHSl0aSGMrS3eAmGgAMBCrcWn6_oOUVi46800kfnHUE6oJEEaCCTbveVqC00z4aBVP8RcQkWAdWjP2uA9QLgHYHh0n45BR79TYcPc4DsnXyAz8Z6RUcOs6yA65f4Q-POhBdDOIG-zHsBXyBUGWY-8vjzjFR6id_YmY4HNxphfJHU-PVLApQOd8-rW8pNmMBN0wnhZCJFeMpZ-61xRHjw2uAFubofUlJQKDWsx-PsVljyQ4q0fKf7TO-dz_3"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEj3_O-z_rPqMpBhDRacBgqizNV9iiwYJvZjD4kBJqbpB3TxLPcEG_6lMyw_2afaouEbecCOkw1fDnpFA-ZKx9k4NS0NyNzRjAyfWbPOXMvF1lPi4Yo-0iqYcjEzWwHhdEMAEGhsANhict_dEICMvb8lZ9xPMvwa7orZCx8dtJ_0n_fXN9qf1fuVImOiufakO0v6Dlbcgp7CBKTPMiwaA3XO54zXOaUk7UviyP2kbzjSK0gjhgoEp7wS4MJ_XK-mh3lh3SpXQzbGPP"
         />
         {/* Grid overlay */}
         <div className="absolute inset-0 grid-overlay opacity-40" />
@@ -250,7 +250,7 @@ export default async function HomePage({
                 <img
                   className="w-full aspect-video object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"
                   alt="Automotive factory production line"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB97lkn2nAdekVVTHkIkNtINSJMjDpdIsJKY_gqYVLVpiH_nHBKO5TPjNGYc35_hByYfqhoYaxSc7WTyEHzSGbgrecTdkJbFGGv6fsHDT7-ZFglTXe7LevHx7mi2L23pf1U8vMfLn4f6Qxqr2RCeSc9CSUDscJO2THQPWz6sA5Tl6GEE3piGUZA_0S0c3JLfo0ykiv4KRv1UtoIFMG-CDOjogwTExjtBl2MXTX4drRb6jj08Bh0mNX5nG7NACqpKjMi4x6jU_cKJ8Cu"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQxnccQDNBx0PFxnKQkP1ebsdveJ2ngWPJevXA2ZAfKYmqTv1HLtX80P7Q2LtzgbnqbNDsTDM6mlhtoUW1TUvjQwvPu_M5tWhahCBNk2TFQK6G_nq0H23Dzr--cIhPO-Z5F2TFyEpoowBG55Fz0GqM0_QhCbm81mQHyWVSrzme6FPfJDF9QmGRq3n_cNg4-AXDfpyXOWNwPJC9eJpZAzn-U6mI0IyPf_4oL74PkfRGDSOS0rAml7OeWDfg5yslqk-4NbprE0N7BTSv"
                 />
               </div>
             </SlideIn>
@@ -313,34 +313,28 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* How We Work — numbered steps with connecting line */}
+      {/* Why HackLab — three value props */}
       <section className="py-32 px-8 bg-surface-container-lowest relative">
         <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-[#00D4AA]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="max-w-7xl mx-auto">
-          <FadeIn className="text-center mb-24">
-            <h2 className="text-5xl md:text-6xl font-headline font-bold mb-6 tracking-tighter">{t("how_we_work.title")}</h2>
-            <p className="text-[#d7e3fc]/50 max-w-2xl mx-auto text-lg">{t("how_we_work.subtitle")}</p>
+          <FadeIn className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-headline font-bold mb-6 tracking-tighter">{t("why_hacklab.title")}</h2>
           </FadeIn>
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="hidden lg:block absolute top-12 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00D4AA]/20 to-transparent" />
-            <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-16 relative z-10">
-              {[
-                { icon: "search", label: t("how_we_work.step1_label"), title: t("how_we_work.step1_title"), desc: t("how_we_work.step1_desc"), num: "01" },
-                { icon: "biotech", label: t("how_we_work.step2_label"), title: t("how_we_work.step2_title"), desc: t("how_we_work.step2_desc"), num: "02" },
-                { icon: "precision_manufacturing", label: t("how_we_work.step3_label"), title: t("how_we_work.step3_title"), desc: t("how_we_work.step3_desc"), num: "03" },
-              ].map((step) => (
-                <StaggerItem key={step.icon} className="text-center group">
-                  <div className="w-24 h-24 bg-surface-container rounded-lg border border-outline-variant/20 flex items-center justify-center mx-auto mb-8 transition-all group-hover:border-[#00D4AA]/40 group-hover:shadow-[0_0_30px_rgba(0,212,170,0.2)]">
-                    <span className="material-symbols-outlined text-4xl text-primary group-hover:text-[#41EEC2] transition-colors">{step.icon}</span>
-                  </div>
-                  <div className="text-primary font-bold text-xs tracking-widest uppercase mb-4">{step.label}</div>
-                  <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{step.title}</h3>
-                  <p className="text-[#d7e3fc]/50 leading-relaxed max-w-sm mx-auto">{step.desc}</p>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
-          </div>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            {[
+              { icon: "engineering", title: t("why_hacklab.prop1_title"), desc: t("why_hacklab.prop1_desc") },
+              { icon: "speed", title: t("why_hacklab.prop2_title"), desc: t("why_hacklab.prop2_desc") },
+              { icon: "verified", title: t("why_hacklab.prop3_title"), desc: t("why_hacklab.prop3_desc") },
+            ].map((prop) => (
+              <StaggerItem key={prop.icon} className="group">
+                <div className="w-20 h-20 bg-primary/15 rounded-xl flex items-center justify-center mx-auto mb-6 transition-all group-hover:bg-primary/25 group-hover:scale-110">
+                  <span className="material-symbols-outlined text-4xl text-primary group-hover:text-[#41EEC2] transition-colors">{prop.icon}</span>
+                </div>
+                <h3 className="text-2xl font-headline font-bold mb-4 tracking-tight">{prop.title}</h3>
+                <p className="text-[#d7e3fc]/50 leading-relaxed max-w-sm mx-auto">{prop.desc}</p>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
         </div>
       </section>
 

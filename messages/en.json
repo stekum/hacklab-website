@@ -74,18 +74,14 @@
     "years": "Years Data Engineering",
     "continents": "Continents"
   },
-  "how_we_work": {
-    "title": "How We Work",
-    "subtitle": "Our methodical approach reduces project risks and accelerates time-to-value.",
-    "step1_label": "Step 01",
-    "step1_title": "Discovery",
-    "step1_desc": "Analysis of the existing data landscape and definition of use cases with the highest business impact.",
-    "step2_label": "Step 02",
-    "step2_title": "Prototype",
-    "step2_desc": "Rapid validation of concepts through a Minimum Viable Data Product within 4 weeks.",
-    "step3_label": "Step 03",
-    "step3_title": "Production",
-    "step3_desc": "Scaling the solution into the enterprise landscape with focus on security, CI/CD, and data quality."
+  "why_hacklab": {
+    "title": "Why HackLab",
+    "prop1_title": "Senior from Day 1",
+    "prop1_desc": "No junior rotation. You work directly with experienced architects and engineers who know your industry.",
+    "prop2_title": "4 Weeks to MVP",
+    "prop2_desc": "Rapid validation through focused prototypes instead of months of concept phases.",
+    "prop3_title": "Measurable Results",
+    "prop3_desc": "We measure success by business impact — not by delivered slides or booked consulting days."
   },
   "cta": {
     "title": "Ready for AI-ready Data?",

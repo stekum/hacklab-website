@@ -39,7 +39,7 @@ export default async function IndustriesPage({
                 className="absolute right-0 top-0 w-1/2 h-full object-cover mix-blend-overlay opacity-30 hidden lg:block"
                 style={{ maskImage: "linear-gradient(to left, black, transparent)" }}
                 alt="ESG sustainability factory with green technology"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbKQEGU9gdBEh2CwA_tpoKHqfgZo6Xjzs_dYLBZGds2N__fqD5gzlxaEORnZqPuYVdi9kHS4y9dDryRp8wa1ExuRHEPTQHugBZj5VjdzUTKMCHCyy_GRp2ot-MbLkEBmiv1NcNAis_Sd_5Uo5PFqBOQpJl656mCrPJaNPBjkZw6OdKGy5ovl0kHcMTg8TrRQnZapUskG-YFHF9j5kT8Rm50Lym8YNWiB2-e3PN4wa15C1xp5vFPHCmrse0O_siMwf4FXv9Fh8RXTc0"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQxnccQDNBx0PFxnKQkP1ebsdveJ2ngWPJevXA2ZAfKYmqTv1HLtX80P7Q2LtzgbnqbNDsTDM6mlhtoUW1TUvjQwvPu_M5tWhahCBNk2TFQK6G_nq0H23Dzr--cIhPO-Z5F2TFyEpoowBG55Fz0GqM0_QhCbm81mQHyWVSrzme6FPfJDF9QmGRq3n_cNg4-AXDfpyXOWNwPJC9eJpZAzn-U6mI0IyPf_4oL74PkfRGDSOS0rAml7OeWDfg5yslqk-4NbprE0N7BTSv"
               />
             </div>
           </FadeIn>
@@ -77,7 +77,7 @@ export default async function IndustriesPage({
               <img
                 className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-500 group-hover:opacity-30"
                 alt="Financial trading floor with data screens"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuADElVeOHI4La4iolggafun8m2bZ-ySKYnt_O3fd1NKcZk3jM80f23tj91_mU3nllUoauQKIEIvQgbGuHJSYC4tDdT4pkJ-VOyCo5zXjHKM1RumWrj8XzDLoxg-E2RxxABSFUxY1LsxBSC3nT77H3ofjZJGdr2y0oB7GpGylCJxbPm3E9tsTsX_Aac84kv2DBkHJmqyfT6GUiRBufrlzKrnMYzjqN1Eas9-6zDYBEEULNOLdo7mvVyj8_mZSpcKZ7fIIMoxTKRwLDdd"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEj3_O-z_rPqMpBhDRacBgqizNV9iiwYJvZjD4kBJqbpB3TxLPcEG_6lMyw_2afaouEbecCOkw1fDnpFA-ZKx9k4NS0NyNzRjAyfWbPOXMvF1lPi4Yo-0iqYcjEzWwHhdEMAEGhsANhict_dEICMvb8lZ9xPMvwa7orZCx8dtJ_0n_fXN9qf1fuVImOiufakO0v6Dlbcgp7CBKTPMiwaA3XO54zXOaUk7UviyP2kbzjSK0gjhgoEp7wS4MJ_XK-mh3lh3SpXQzbGPP"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#071325] via-[#071325]/60 to-transparent" />
               <div className="relative z-10 p-10">
