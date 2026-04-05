@@ -25,7 +25,7 @@ export function Header() {
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <Link href="/" className="flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-8" />
+          <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-14" />
         </Link>
 
         {/* Desktop Nav */}

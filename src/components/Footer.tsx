@@ -10,7 +10,7 @@ export function Footer() {
         <div className="space-y-6">
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-7" />
+            <img src="/hacklab-website/hacklab-logo.png" alt="HackLab" className="h-12" />
           </div>
           <p className="font-body text-sm leading-relaxed text-[#d7e3fc]/60 max-w-xs">
             {t("description")}
